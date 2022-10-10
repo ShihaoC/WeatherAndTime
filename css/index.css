@@ -1,0 +1,185 @@
+@font-face {
+    font-family: momo;
+    src: url("../fonts/JetBrainsMono-Bold-7.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.7s;
+    user-select: none;
+    overflow: hidden;
+    font-family: momo;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.main {
+    position: absolute;
+    top: 30vh;
+    font-family: momo;
+    font-size: 10vh;
+    color: white;
+}
+
+.main:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.date {
+    position: absolute;
+    top: 20vh;
+    color: white;
+    font-size: 5vh;
+}
+
+.date:hover span {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.wea {
+    z-index: -1;
+    text-align: center;
+    line-height: 4vh;
+    position: absolute;
+    top: 1vh;
+    right: 0.5vw;
+    color: white;
+    font-size: 1vw;
+    height: 8vh;
+    width: 12vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+.city {
+    display: block;
+}
+
+.m\/s {
+    font-size: 1vh;
+}
+
+/* From uiverse.io by @mrhyddenn */
+.progress-loader {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 5vh;
+    left: 93.5vw;
+}
+
+.progress-loader {
+    width: 200px;
+    background: rgba(236, 236, 238, 0.253);
+    height: 3px;
+    border-radius: 7px;
+}
+
+.progress {
+    content: '';
+    width: 1px;
+    height: 3px;
+    border-radius: 7px;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    animation: loading1274 2s ease infinite;
+}
+
+@keyframes loading1274 {
+    0% {
+        width: 0%;
+    }
+
+    10% {
+        width: 10%;
+    }
+
+    50% {
+        width: 40%;
+    }
+
+    60% {
+        width: 60%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.logger {
+    box-sizing: border-box;
+    position: absolute;
+    width: 20vw;
+    height: 15vh;
+    background-color: none;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #333333;
+    border-left: 1px solid #333333;
+    border-radius: 8px 0 0 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+    padding: 0.3vw;
+}
+
+.title {
+    position: absolute;
+    display: block;
+    height: auto;
+    width: 20vw;
+    text-align: center;
+    color: white;
+    bottom: 15.5vh;
+    right: 0;
+}
+
+.log {
+    display: block;
+    color: white;
+    font-size: 14px;
+}
+
+.time {
+    color: green;
+}
+
+.statue {
+    color: aqua;
+}
+
+.msg {
+    color: white;
+}
+
+
+.logger::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 5px;
+    /* 高宽分别对应横竖滚动条的尺寸 */
+    height: 1px;
+}
+
+.logger::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    box-shadow: inset 0 0 5px rgba(219, 219, 219, 0.5);
+    background: #d6d6d6;
+}
+
+.logger::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    background: #000;
+}
